@@ -6,8 +6,8 @@ How to run
 `uvicorn api:app --reload`
 
 URLs:
-POST `\place\`
-POST `\move\`
-POST `\left\`
-POST `\right\`
-GET `\report\`
+- POST `\place\`
+- POST `\move\`
+- POST `\left\`
+- POST `\right\`
+- GET `\report\`
