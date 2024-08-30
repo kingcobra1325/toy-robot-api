@@ -13,7 +13,7 @@ def test_place_negative_x_error():
         "/place/",
         json={
             "x": -1,
-            "y": 10,
+            "y": 5,
             "face": "NORTH",
         },
     )
@@ -28,7 +28,7 @@ def test_place_negative_y_error():
     response = client.post(
         "/place/",
         json={
-            "x": 10,
+            "x": 5,
             "y": -1,
             "face": "NORTH",
         },
@@ -141,12 +141,12 @@ def test_move_success():
 
 def test_move_inplace_success():
     for face, border_coord, in (
-        ("NORTH", {"y": 10}),
+        ("NORTH", {"y": 5}),
         ("SOUTH", {"y": 0}),
-        ("EAST", {"x": 10}),
+        ("EAST", {"x": 5}),
         ("WEST", {"x": 0}),
     ):
-        original_coordinates = {"x": 10, "y": 10, "face": face.lower()}.update(border_coord)
+        original_coordinates = {"x": 5, "y": 5, "face": face.lower()}.update(border_coord)
 
         toy_db.details = deepcopy(original_coordinates)
 

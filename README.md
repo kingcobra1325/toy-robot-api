@@ -8,8 +8,8 @@ If the toy is moving beyond the table dimension, it will simply stay in its curr
 its location on the table.
 
 Table Dimensions
-X [0-10]
-Y [0-10]
+X [0-5]
+Y [0-5]
 
 ## Modules Used
 
