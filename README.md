@@ -55,6 +55,7 @@ curl -X POST "http://127.0.0.1:8000/move/" -H "Content-Type: application/json"
 This will move the toy one place forward. Will stay in place if it has reached the edge of the table.
 Does no action when no toy is placed.
 
+
 - POST `\left\`
 ```bash
 curl -X POST "http://127.0.0.1:8000/left/" -H "Content-Type: application/json"
@@ -62,6 +63,7 @@ curl -X POST "http://127.0.0.1:8000/left/" -H "Content-Type: application/json"
 
 Will turn the toy to its left once. It will not move the toy's location.
 Does no action when no toy is placed.
+
 
 - POST `\right\`
 ```bash
@@ -71,6 +73,7 @@ curl -X POST "http://127.0.0.1:8000/right/" -H "Content-Type: application/json"
 Will turn the toy to its right once. It will not move the toy's location.
 Does no action when no toy is placed.
 
+
 - GET `\report\`
 ```bash
 curl -X GET "http://127.0.0.1:8000/report/" -H "Content-Type: application/json"
@@ -78,6 +81,7 @@ curl -X GET "http://127.0.0.1:8000/report/" -H "Content-Type: application/json"
 
 Fetch the toy's current location details.
 Returns an empty dict when no toy is placed.
+
 
 
 ## Caveats
