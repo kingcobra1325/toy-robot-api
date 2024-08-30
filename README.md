@@ -102,4 +102,4 @@ Returns an empty dict when no toy is placed.
 - TURN RIGHT No toy placed
 - TURN RIGHT Successful
 - REPORT No toy placed
-- RE{PRT} Successful
+- REPORT Successful
