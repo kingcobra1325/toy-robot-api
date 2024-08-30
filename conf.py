@@ -1,0 +1,2 @@
+MAX_TABLE_X = 10
+MAX_TABLE_Y = 10
