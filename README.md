@@ -22,15 +22,15 @@ Y [0-4]
 ## Steps to Run
 
 1. **Clone the repository:**
-git clone https://github.com/kingcobra1325/toy-robot-api
+'git clone https://github.com/kingcobra1325/toy-robot-api'
 
 
 3. **Install the required dependencies:**
-pip install -r requirements.txt
+'pip install -r requirements.txt'
 
 
 4. **Run the FastAPI server via Uvicorn:**
-uvicorn api:app --reload
+'uvicorn api:app --reload'
 
 
 5. **Perform actions to the toy by accessing the following URLs.**
