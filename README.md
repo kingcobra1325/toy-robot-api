@@ -7,9 +7,9 @@ no toy is placed on the table.
 If the toy is moving beyond the table dimension, it will simply stay in its current place. Turning the toy will change
 its location on the table.
 
-Table Dimensions
-X [0-5]
-Y [0-5]
+Table Dimensions ( 5 X 5 )
+X [0-4]
+Y [0-4]
 
 ## Modules Used
 

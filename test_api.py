@@ -13,7 +13,7 @@ def test_place_negative_x_error():
         "/place/",
         json={
             "x": -1,
-            "y": 5,
+            "y": 3,
             "face": "NORTH",
         },
     )
@@ -28,7 +28,7 @@ def test_place_negative_y_error():
     response = client.post(
         "/place/",
         json={
-            "x": 5,
+            "x": 3,
             "y": -1,
             "face": "NORTH",
         },
@@ -45,7 +45,7 @@ def test_place_over_max_limit_x_error():
         "/place/",
         json={
             "x": 16,
-            "y": 5,
+            "y": 3,
             "face": "NORTH",
         },
     )
@@ -60,7 +60,7 @@ def test_place_over_max_limit_y_error():
     response = client.post(
         "/place/",
         json={
-            "x": 5,
+            "x": 3,
             "y": 11,
             "face": "NORTH",
         },
@@ -76,8 +76,8 @@ def test_place_invalid_face_error():
     response = client.post(
         "/place/",
         json={
-            "x": 4,
-            "y": 5,
+            "x": 3,
+            "y": 4,
             "face": "WRONGFACE",
         },
     )
@@ -93,8 +93,8 @@ def test_place_success():
         response = client.post(
             "/place/",
             json={
-                "x": 4,
-                "y": 5,
+                "x": 3,
+                "y": 4,
                 "face": face,
             },
         )
@@ -102,7 +102,7 @@ def test_place_success():
         assert response.status_code == 200
 
         # Check db is working
-        assert toy_db.details == {"x": 4, "y": 5, "face": face.lower()}
+        assert toy_db.details == {"x": 3, "y": 4, "face": face.lower()}
 
 
 ########## MOVE
@@ -141,12 +141,12 @@ def test_move_success():
 
 def test_move_inplace_success():
     for face, border_coord, in (
-        ("NORTH", {"y": 5}),
+        ("NORTH", {"y": 4}),
         ("SOUTH", {"y": 0}),
-        ("EAST", {"x": 5}),
+        ("EAST", {"x": 4}),
         ("WEST", {"x": 0}),
     ):
-        original_coordinates = {"x": 5, "y": 5, "face": face.lower()}.update(border_coord)
+        original_coordinates = {"x": 4, "y": 4, "face": face.lower()}.update(border_coord)
 
         toy_db.details = deepcopy(original_coordinates)
 
@@ -243,8 +243,8 @@ def test_report_no_toy_placed():
 
 def test_report_success():
     toy_db.details = {
-        "x": 4,
-        "y": 5,
+        "x": 3,
+        "y": 4,
         "face": "NORTH",
     }
 
@@ -254,7 +254,7 @@ def test_report_success():
 
     # Check the toy details are returned correctly
     assert response.json() == {
-        "x": 4,
-        "y": 5,
+        "x": 3,
+        "y": 4,
         "face": "north",
     }
